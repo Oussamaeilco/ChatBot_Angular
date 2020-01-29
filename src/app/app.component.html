@@ -1,0 +1,40 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>  $(function(){
+    $("#addClass").click(function () {
+              $('#qnimate').addClass('popup-box-on');
+                });
+              
+                $("#removeClass").click(function () {
+              $('#qnimate').removeClass('popup-box-on');
+                });
+      })
+</script>
+
+<div class="container text-center">
+	<div class="row">
+		<div class="round hollow text-center">
+        <a href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
+        </div>
+        
+        <hr>
+         
+	</div>
+</div>
+
+<div class="popup-box chat-popup" id="qnimate">
+    <div class="popup-head">
+  <div class="popup-head-left pull-left">Posez vos questions</div>
+      <div class="popup-head-right pull-right">
+        <button data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"><i class="glyphicon glyphicon-off"></i></button>
+      </div>
+      <div  class="chatform">
+              <message-list [messages]="messages"></message-list>
+              <message-form [message]="message" [messages]="messages"></message-form>
+      </div>     
+            
+      
+</div>
+
+
